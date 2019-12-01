@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   Student.associate = function(models) {
-    Student.belongsTo(Class);
+    Student.belongsTo(models.Class);
   };
   return Student;
 };
