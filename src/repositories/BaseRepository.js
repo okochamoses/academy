@@ -19,7 +19,8 @@ class BaseRepository {
   }
 
   async update(id, obj) {
-    return await this.model.update(obj, { returning: true, where: { id: id } });
+    await this.model.update(obj, { where: { id: id } });
+    return await this.model.findByPk(id);
   }
 
   async findFirst(condition) {
