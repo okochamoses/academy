@@ -14,3 +14,7 @@ module.exports.DB = {
   host: process.env.DB_HOST,
   port: process.env.DB_PORT
 };
+
+module.exports.Keys = {
+  jwt_secret: process.env.JWT_SECRET
+}

@@ -3,7 +3,7 @@ const { DB } = require("./configs");
 module.exports = {
   development: {
     username: "root",
-    password: null,
+    password: "password",
     database: "academy_dev",
     host: "127.0.0.1",
     dialect: "mysql",

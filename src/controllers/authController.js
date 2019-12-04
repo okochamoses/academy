@@ -3,9 +3,10 @@ const studentRepo = require("../repositories/StudentRepo");
 const adminRepo = require("../repositories/AdminRepo");
 const Auth = require("../services/Auth");
 
-module.exports.getUsers = async clientRequest => {
+module.exports.getUserTypes = async clientRequest => {
   try {
-    return new ServiceResponse().success().data(await adminRepo.findAll());
+    const userTypes = ["STUDENT", "ADMIN", "TEACHER", "GUARDIAN"];
+    return new ServiceResponse().success().data(userTypes);
   } catch (error) {
     console.log(error);
   }

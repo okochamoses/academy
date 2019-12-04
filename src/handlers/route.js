@@ -11,6 +11,7 @@ class RouteHandler {
   registerRoutes() {
     this.registerRoute("", routes.homeRouter);
     this.registerRoute("user", routes.usersRouter);
+    this.registerRoute("authenticate", routes.authRouter)
   }
 
   registerRoute(endpoint, route) {

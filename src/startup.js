@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const logger = require("morgan");
 const RouteHandler = require("./handlers/route");
+const passport = require("passport");
 
 const app = express();
 
@@ -17,6 +18,7 @@ class Application {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: false }));
     this.app.use(express.static(path.join(__dirname, "public")));
+    this.app.use(passport.initialize());
     this.routeHandler.registerRoutes(); // Register Routes
     this.connectDatabase(); // Connect to database
 

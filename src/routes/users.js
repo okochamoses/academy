@@ -5,5 +5,7 @@ const userController = require("../controllers/users");
 
 /* GET users listing. */
 router.get("/", httpHandler(userController.getUsers));
+/* POST generate a bearer token */
+router.post("/", httpHandler(userController.login));
 
 module.exports = router;
